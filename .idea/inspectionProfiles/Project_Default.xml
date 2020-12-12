@@ -1,0 +1,19 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="scripts.analysis_utils_2.yaml_objects_2.base2.YamlMapMixin.*" />
+          <option value="scripts.analysis_utils_2.yaml_objects_2.base2.YamlSeqMixin.*" />
+          <option value="dict.maps" />
+          <option value="dict.parents" />
+          <option value="ruamel.yaml.comments.CommentedMap.string_access" />
+          <option value="scripts.analysis_utils_2.yaml_objects_2.base2.YamlScalar.*" />
+          <option value="scripts.analysis_utils_2.yaml_objects_2.base2.YamlMap.*" />
+          <option value="scripts.analysis_utils_2.yaml_objects_2.base2.YamlSeq.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

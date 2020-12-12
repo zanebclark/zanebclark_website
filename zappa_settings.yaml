@@ -1,0 +1,39 @@
+base: &base
+  aws_region: us-west-1
+  profile_name: default
+  project_name: zanebclark-web
+  runtime: python3.8
+  use_precompiled_packages: false
+#  memory_size: 3008
+#  slim_handler: true
+#  timeout_seconds: 900
+dev: &dev
+  <<: *base
+  django_settings: zanebclark_website.settings-dev
+  environment_variables:
+    STAGE: dev
+staging: &staging
+  <<: *base
+  django_settings: zanebclark_website.settings-staging
+  s3_bucket: zappa-gmz6mky9y
+  environment_variables:
+    STAGE: staging
+    secret_name: zanebclark_website_staging
+prod:
+  django_settings: zanebclark_website.settings
+  environment_variables:
+    STAGE: prod
+    secret_name: zanebclark_website_prod
+#staging:
+
+#prod:
+#  domain: "sarit.evil.com"
+#  remote_env: "s3://futh-life-dev-sarit/env.json"
+
+#  certificate_arn: "arn:aws:acm:us-east-1:xxxxxxxxxxxx"
+#sarit:
+#  <<: *dev
+#  s3_bucket: "futh-life-zappa-dev-sarit"
+#dev:
+#  django_settings: FridgeWizeDashboard.settings
+#  s3_bucket: zappa-vtzhi64n6
